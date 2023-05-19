@@ -4,6 +4,14 @@ body {
     text-align: center;
 }
 
+section {
+    margin: 40px 20px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 h1 {
     padding-top: 4em;
 }
@@ -13,6 +21,6 @@ p {
 }
 
 img {
-    width: 40em;
+    width: 20em;
     max-width: 90%;
 }
