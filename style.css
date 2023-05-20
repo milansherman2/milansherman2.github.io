@@ -5,12 +5,12 @@ body {
     padding: 0;
     background: black;
     color: white;
+    width: 100vw;
 
     
     }
     section {
       margin: 0 auto;
-      padding: 20px;  
     }
     
     .section-text {
@@ -18,7 +18,7 @@ body {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      width: 100vw;
+      width: 50vw;
       padding: 50px;
       border-radius: 10px;
       border: 2px solid rgb(54, 69, 79);
