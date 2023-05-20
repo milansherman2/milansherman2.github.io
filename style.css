@@ -1,4 +1,29 @@
-body {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    font-size: 36px;
+  }
+  
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .header-title {
+    font-family: arial;
+    text-transform: uppercase;
+  }
+  
+  .header-description {
+    font-family: arial;
+    font-size: 20px; 
+    font-weight: 400;
+  }
+  
+  body {
     display: flex;
     flex-direction: column;
     margin: 0;
