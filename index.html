@@ -14,10 +14,19 @@
 </head>
 
 <body>
+    <!-- Top navigation -->
+    <div class="topnav">
+        <!-- Left-aligned links (default) -->
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
     <div class="parallax"></div>
     <div class="body">
         <section>
-            <div class='header'>
+            <div class='header animated fadeInUp'>
                 <div class='header-text'>
                     <h1 class='header-title'>Milan Sherman</h1>
                     <h5 class='subheader'>Data Scientist</h5>
@@ -28,7 +37,7 @@
             </div>
     </div>
     </section>
-    <div class="card-container">
+    <div id='projects' class="card-container">
         <section>
             <div class="section-text">
                 <h1 class="title">Predicting Approved Risk Class</h1>
@@ -105,10 +114,14 @@
     </div>
 
 
-    <section class="footer-section">
-        <div class='img-container'><img src='assets/images/Milan Sherman Profile Pic.jpg'>
+    <section id='about' class="footer-section">
+
         <div class="footer">
+
             <div class='footer-text'>
+                <div class='img-container'>
+                    <img src='assets/images/Milan Sherman Profile Pic.jpg'>
+                </div>
                 <h1 class='footer-title'>About Me</h1>
                 <!-- <h5 class='subheader'>Data Scientist</h5> -->
                 <p class='footer-description'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -117,12 +130,9 @@
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                </div>
-                
             </div>
-
+        </div>
     </section>
-    </div>
 
 </body>
 
