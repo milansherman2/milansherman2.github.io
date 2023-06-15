@@ -7,19 +7,21 @@ body {
     width: 100vw;
     font-family: 'Montserrat', sans-serif;
     background: rgba(51, 45, 45);
-    background-image: url("assets/images/bg-img2.jpg");
+    background-image: url("assets/images/bg-img5.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
- 
+
 }
+
 body::before {
     content: '';
     position: absolute;
     height: 500vh;
     width: 100vw;
-    background: rgba(51, 45, 45, 0.91);
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(185,185,185,0.8590029761904762) 0%, rgba(51,45,45,0.9654455532212886) 71%);
     z-index: 0;
 }
 
@@ -29,9 +31,71 @@ body::before {
 
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: #333;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
 
 .parallax {
-    background-image: url("assets/images/bg-img2.jpg");
+    background-image: url("assets/images/bg-img5.jpg");
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -52,7 +116,47 @@ body::before {
     padding: 0 200px;
     text-align: center;
     z-index: 2;
+    
 
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
 }
 
 .header-text {
@@ -87,8 +191,6 @@ body::before {
     justify-content: space-between;
     width: 70vw;
     font-size: 36px;
-    /* margin-top: 20%; */
-    /* padding: 0 200px; */
     text-align: center;
     z-index: 2;
 
@@ -125,7 +227,9 @@ body::before {
 .footer-section {
     width: 100vw;
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
 }
 
 .img-container {
@@ -133,6 +237,7 @@ body::before {
     position: relative;
     width: 200px;
     height: 200px;
+    margin: 40px 0;
     align-self: center;
     justify-self: center;
 
@@ -143,6 +248,7 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    filter: grayscale(80%);
 
 
 }
@@ -178,8 +284,7 @@ img {
 }
 
 .section-text:hover {
-    border: 2px solid rgba(0, 0, 0, 0.35);
-    background-color: rgba(0, 0, 0, 0.044);
+    background-color: rgba(222, 222, 222, 0.24);
     transition: all 0.2s ease-in-out;
 }
 
@@ -203,5 +308,7 @@ img {
 
 .link:hover {
     border: 1px solid white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: all .2s ease-in-out;
 }
